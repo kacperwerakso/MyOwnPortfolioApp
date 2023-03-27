@@ -1,0 +1,17 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+{% block tytul %} Usun {% endblock %}
+
+{% block strona %}
+<body style="background-image: url('https://img.freepik.com/free-vector/black-carbon-fiber-texture-pattern-background_1017-33436.jpg'); background-size: 100%; font-family: Verdana;"><br>
+    <div class="card" style="border-width: 5px; border-color: black; margin: auto; width: 60%; padding: 10px; display: block; margin-left: auto; margin-right: auto; background-size: 200%; background-image: url('https://t4.ftcdn.net/jpg/03/78/40/11/360_F_378401105_9LAka9cRxk5Ey2wwanxrLTFCN1U51DL0.jpg')">
+        <div class="card-body">
+    <h3 class="card-title" style="text-align: center">Potwierdź usunięcie</h3><br><br>
+
+    <form method="post">
+        {% csrf_token %}
+    <button type="submit" class="btn btn-light" style="background-color: lightgray; border-width: 2px; border-color: black; width: 40%; padding: 10px; display: block; margin-left: auto; margin-right: auto;">Usuń</button><br>
+    </body><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="{% url 'strona_image' %}" style="border-width: 5px; border-color: black; margin: auto; width: 20%; padding: 3px; display: block; margin-left: auto; margin-right: auto;" class="btn btn-light">Wróć</a>
+
+{% endblock %}

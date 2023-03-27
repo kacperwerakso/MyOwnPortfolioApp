@@ -1,0 +1,29 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+{% block tytul %} image form {% endblock %}
+
+{% block strona %}
+
+<body style="background-size: 50% 100%; background-image: url('https://img.freepik.com/free-vector/black-carbon-fiber-texture-pattern-background_1017-33436.jpg')"><br>
+<div class="card" style="border-width: 5px; border-color: black; margin: auto; width: 60%; padding: 10px; display: block; margin-left: auto; margin-right: auto; background-size: 200%; background-image: url('https://t4.ftcdn.net/jpg/03/78/40/11/360_F_378401105_9LAka9cRxk5Ey2wwanxrLTFCN1U51DL0.jpg')">
+    <div class="card-body">
+<h3 class="card-title" style="text-align: center">Nowa grafika</h3> 
+<br>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <br>
+    <button type="submit" class="btn btn-light" style="border-width: 2px; border-color: black; display: block; margin-left: auto; margin-right: auto; background-color: lightgray;">Dodaj grafikę</button>
+</form>
+
+
+    </div>
+</div>
+</body>
+    <br>
+    <br>
+    <a href="{% url 'strona_image' %}" style="border-width: 5px; border-color: black; margin: auto; width: 20%; padding: 3px; display: block; margin-left: auto; margin-right: auto;" class="btn btn-light">Cofnij</a><br>
+{% endblock %}
+
+
+

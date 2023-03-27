@@ -1,0 +1,23 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+{% block tytul %} Logowanie {% endblock %}
+
+{% block strona %}
+<body style="background-size: 100%; background-image: url('https://img.freepik.com/free-vector/black-carbon-fiber-texture-pattern-background_1017-33436.jpg')"></body>
+<div class="card" style="border: 5px solid black; margin: auto; width: 500px; display: block; margin-left: auto; margin-right: auto; margin-top: 25px; background-image: url('https://t4.ftcdn.net/jpg/03/78/40/11/360_F_378401105_9LAka9cRxk5Ey2wwanxrLTFCN1U51DL0.jpg')">
+    <div class="card-body">
+<h3 class="card-title" style="text-align: center">Zaloguj się</h3> 
+<br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <br>
+        <button type="submit" class="btn btn-light" style="border-width: 2px; border-color: black; display: block; margin-left: auto; margin-right: auto; background-color: lightgray;">Zaloguj <i class="fa-solid fa-right-to-bracket"></i></button>
+    </form>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<a href="{% url 'strona_image' %}" style="border-width: 5px; border-color: black; margin: auto; width: 20%; padding: 3px; display: block; margin-left: auto; margin-right: auto;" class="btn btn-light">Cofnij</a>
+</body>
+</html>
+{% endblock %}
